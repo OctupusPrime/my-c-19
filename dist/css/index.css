@@ -1,0 +1,435 @@
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+.resize-observer[data-v-8859cc6c]{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:transparent;pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer[data-v-8859cc6c] object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+div,
+a,
+input {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+  list-style: none;
+}
+.global-container {
+  display: inline-block;
+  width: 100%;
+}
+.global-container .wrapper {
+  margin: 10px auto;
+  max-width: 1000px;
+  width: 90%;
+}
+.global-container .wrapper .title {
+  width: 100%;
+}
+.global-container .wrapper .title > h1 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 25px;
+}
+.global-container .wrapper .title > p {
+  display: inline-block;
+  font-weight: 500;
+  padding-left: 5px;
+}
+.global-container .wrapper .totalCases-conteiner {
+  display: inline-block;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(54deg, #CD286A, #A62812);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.global-container .wrapper .totalCases-conteiner .title > h1 {
+  color: #fff;
+}
+.global-container .wrapper .totalCases-conteiner .content {
+  display: inline-block;
+  width: 100%;
+}
+.global-container .wrapper .totalCases-conteiner .content .grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.global-container .wrapper .totalCases-conteiner .content .item {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  text-align: center;
+  margin-top: 15px;
+}
+.global-container .wrapper .totalCases-conteiner .content .item > i {
+  color: #fff;
+  font-size: 20px;
+}
+.global-container .wrapper .totalCases-conteiner .content .item > h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+.global-container .wrapper .totalCases-conteiner .content .item > p {
+  display: inline-block;
+  color: #fff;
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.global-container .wrapper .totalCases-conteiner .content .item:last-child {
+  margin-bottom: 15px;
+}
+.global-container .wrapper .likedCountries-conteiner {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  background: linear-gradient(43deg, #C9D6FF, #E2E2E2);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.global-container .wrapper .likedCountries-conteiner .title {
+  position: relative;
+  margin-bottom: 10px;
+}
+.global-container .wrapper .likedCountries-conteiner .title .switch {
+  right: 0;
+  top: 50%;
+}
+.global-container .wrapper .tabelCountries-conteiner {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  background: linear-gradient(43deg, #f12711, #f5af19);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  padding: 7px;
+  box-sizing: border-box;
+}
+.global-container .wrapper .tabelCountries-conteiner .title {
+  position: relative;
+  margin-bottom: 10px;
+}
+.global-container .wrapper .tabelCountries-conteiner .title .switch {
+  right: 0;
+  top: 50%;
+}
+.global-container .wrapper .tabelCountries-conteiner .search {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.global-container .wrapper .tabelCountries-conteiner .search .edit {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+.global-container .wrapper .earlyBuild-conteiner {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 5px;
+  background: linear-gradient(54deg, #16A085, #F4D03F);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  padding: 7px;
+  box-sizing: border-box;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.switch {
+  display: inline-block;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.switch .isCase {
+  -webkit-appearance: none;
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 1px solid #8d99ae;
+  background-color: #fff;
+  transition: all 0.15s ease;
+}
+.switch .isCase::before {
+  content: attr(data-title);
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+.switch .isCase:focus {
+  outline: none;
+}
+.switch .isCase:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.switch .isCase:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.switch .isCase:checked {
+  background-color: #3b86ff;
+  color: #fff;
+  border-color: #3b86ff;
+}
+.table-conteiner > table {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-collapse: collapse;
+}
+.table-conteiner > table th {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  font-size: 15px;
+}
+.table-conteiner > table th:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.table-conteiner > table th:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.table-conteiner > table .like {
+  cursor: pointer;
+}
+.table-conteiner > table td {
+  border-bottom: 1px solid #fff;
+}
+.table-conteiner > table td > i {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+.table-conteiner > table th,
+.table-conteiner > table td {
+  padding: 5px 0;
+}
+.table-conteiner .addBth-container {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 7px;
+}
+.table-conteiner .addBth-container .btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #fff;
+  padding: 4px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.table-conteiner .addBth-container .btn > i {
+  padding: 0 5px;
+}
+.slider-conteiner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.slider-conteiner .slider-row {
+  display: block;
+  width: 10000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.slider-conteiner .slider-row.animate {
+  transition: all 0.4s ease;
+}
+.slider-conteiner .slider-row .slide {
+  display: block;
+  float: left;
+}
+.slider-conteiner .slider-row .slide .info .countrieTitle {
+  width: 100%;
+  position: relative;
+}
+.slider-conteiner .slider-row .slide .info .countrieTitle h1 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 25px;
+  padding-left: 25px;
+}
+.slider-conteiner .slider-row .slide .info .countrieTitle i {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.slider-conteiner .slider-row .slide .info .content {
+  display: inline-block;
+  width: 100%;
+}
+.slider-conteiner .slider-row .slide .info .content .grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.slider-conteiner .slider-row .slide .info .content .item {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  text-align: center;
+  margin-top: 15px;
+}
+.slider-conteiner .slider-row .slide .info .content .item > i {
+  font-size: 20px;
+}
+.slider-conteiner .slider-row .slide .info .content .item > h1 {
+  font-weight: 700;
+  font-size: 18px;
+}
+.slider-conteiner .slider-row .slide .info .content .item > p {
+  display: inline-block;
+  padding-left: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.slider-conteiner .slider-row .slide .info .content .item:last-child {
+  margin-bottom: 30px;
+}
+.slider-conteiner .leftBtn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  cursor: pointer;
+  font-size: 20px;
+}
+.slider-conteiner .rightBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+  cursor: pointer;
+  font-size: 20px;
+}
+.slider-conteiner .dots-row {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.slider-conteiner .dots-row .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 0 2.5px;
+  background-color: #000;
+  transition: all 0.4s ease;
+}
+.slider-conteiner .dots-row .dot.active {
+  background-color: #3b86ff;
+}
+@media (max-width: 900px) {
+  .global-container .wrapper .totalCases-conteiner .content .grid .item {
+    width: 50%;
+  }
+  .slider-conteiner .slider-row .slide .info .content .grid .item {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .global-container .wrapper .totalCases-conteiner .title {
+    text-align: center;
+  }
+  .global-container .wrapper .totalCases-conteiner .content .grid .item {
+    width: 100%;
+  }
+  .global-container .wrapper .likedCountries-conteiner .title {
+    text-align: center;
+    margin: 0;
+  }
+  .global-container .wrapper .likedCountries-conteiner .title > h1 {
+    padding-bottom: 64px;
+  }
+  .global-container .wrapper .likedCountries-conteiner .title .switch {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .global-container .wrapper .tabelCountries-conteiner .title {
+    text-align: center;
+    margin: 0;
+  }
+  .global-container .wrapper .tabelCountries-conteiner .title h1 {
+    padding-bottom: 64px;
+  }
+  .global-container .wrapper .tabelCountries-conteiner .title .switch {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .table-conteiner > table thead {
+    display: none;
+  }
+  .table-conteiner > table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+  }
+  .table-conteiner > table td {
+    display: block;
+    text-align: right;
+    border-color: transparent;
+  }
+  .table-conteiner > table .like {
+    text-align: center;
+  }
+  .table-conteiner > table td:before {
+    content: attr(aria-label);
+    float: left;
+    font-weight: bold;
+  }
+  .slider-conteiner .slider-row .slide .info .content .grid .item {
+    width: 100%;
+  }
+}
